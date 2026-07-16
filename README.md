@@ -1,5 +1,7 @@
 # 文档分析MCP服务器 (mcp-doc-analyzer)
 
+[![CI](https://github.com/wzx11223344/mcp-doc-analyzer/actions/workflows/ci.yml/badge.svg)](https://github.com/wzx11223344/mcp-doc-analyzer/actions/workflows/ci.yml)
+
 基于 MCP (Model Context Protocol) 协议的文档分析服务器，使用 FastMCP 框架，为 AI 客户端提供文档读取、分析、摘要和统计工具。
 
 ## 功能概览
@@ -145,6 +147,20 @@ python -m py_compile mcp_doc_analyzer/reader.py
 python -m py_compile mcp_doc_analyzer/analyzer.py
 python -m py_compile mcp_doc_analyzer/summarizer.py
 python -m py_compile mcp_doc_analyzer/statistics.py
+```
+## 测试
+
+运行单元测试：
+
+```bash
+pip install pytest flake8
+pytest tests/ -v --tb=short
+```
+
+代码质量检查：
+
+```bash
+flake8 . --count --max-line-length=120 --statistics
 ```
 
 ## 许可证
